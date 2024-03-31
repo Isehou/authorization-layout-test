@@ -157,7 +157,8 @@ a:focus::after {
   cursor: pointer;
 }
 .sign-in__btn:active {
-  background: #666666;
+  background: #fbc400;
+  color: #000;
 }
 
 .image-block {
