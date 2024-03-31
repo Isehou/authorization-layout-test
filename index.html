@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authorization Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <section class="authorization-section">
+      <div class="authorization-wrapper">
+        <form class="authorization-form">
+          <div class="authorization-info">
+            <div>
+              <img src="./assets/logo.png" alt="logo" class="logo-img" />
+            </div>
+            <h1 class="title">Welcome friend!</h1>
+            <div class="subtitle">
+              Dont' you have a profile? <a href="#">Register</a>
+            </div>
+            <div class="social-contact">
+              <div class="social-icon">
+                <img src="./assets/social/icon-google.png" alt="" />
+              </div>
+              <div class="social-icon">
+                <img src="./assets/social/icons-github.png" alt="" />
+              </div>
+              <div class="social-icon">
+                <img src="./assets/social/icons-facebook.png" alt="" />
+              </div>
+              <div class="social-icon">
+                <img src="./assets/social/icons-vk.png" alt="" />
+              </div>
+            </div>
+
+            <div class="divider">
+              <span class="divider-text">Or</span>
+            </div>
+
+            <div class="input-wrapper">
+              <span>Email</span>
+              <input
+                class="input"
+                type="text"
+                placeholder="yourname@mail.com"
+              />
+            </div>
+
+            <div class="input-wrapper password-input">
+              <span>Password</span>
+              <input
+                class="input"
+                type="password"
+                id="passwordInput"
+                placeholder="Enter your password"
+              />
+              <div class="password-eye-btn" onclick="toggleHiddenPassword()">
+                <img class="password-eye-icon" src="./assets/eye.png" alt="" />
+              </div>
+            </div>
+
+            <div class="sign-in__btn-wrapper">
+              <button class="sign-in__btn">Sign In</button>
+            </div>
+            <div class="forgot-password">
+              <a href="#">Forgot password</a>
+            </div>
+          </div>
+        </form>
+        <div class="image-block">
+          <img src="./assets/Rectangle.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
