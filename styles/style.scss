@@ -42,165 +42,180 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.authorization-wrapper {
+  @media (max-width: 900px) {
+    width: 420px;
+  }
+  width: 900px;
+  height: 660px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.authorization-form {
+  @media (max-width: 900px) {
+    width: 100%;
+    margin: 0 50px;
+  }
+  margin-left: 15px;
+  width: 460px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-  .authorization-wrapper {
-    @media (max-width: 900px) {
-      width: 420px;
+  .authorization-info {
+    width: 310px;
+
+    .title {
+      font-size: 36px;
+      margin: 20px 0 0 0;
     }
-    width: 900px;
-    height: 660px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
 
-    .authorization-form {
-      @media (max-width: 900px) {
-        width: 100%;
-        margin: 0 50px;
-      }
-      margin-left: 15px;
-      width: 460px;
-      height: 100%;
+    .subtitle {
+      @include link-style;
+      margin-top: 10px;
+    }
+
+    .social-contact {
       display: flex;
       justify-content: center;
-      align-items: center;
+
+      .social-icon {
+        margin: 20px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
+        border: 1px solid #dde1e4;
+
+        & svg path {
+          fill: #000;
+        }
+        &:hover {
+          border: 1px solid #353535;
+          transition: 0.3s ease-out;
+
+          svg path {
+            fill: #353535;
+          }
+        }
+      }
+    }
+
+    .divider {
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      .authorization-info {
-        width: 310px;
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        border-top: 1px solid #7b818e;
+      }
+    }
 
-        .title {
-          font-size: 36px;
-          margin: 20px 0 0 0;
-        }
+    .divider-text {
+      font-weight: bold;
+      color: #7b818e;
+      font-size: 12px;
+      font-weight: 400;
+      margin: 0 15px;
+    }
 
-        .subtitle {
-          @include link-style;
-          margin-top: 10px;
-        }
+    .input-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      margin-top: 20px;
 
-        .social-contact {
-          display: flex;
-          justify-content: center;
+      label {
+        font-size: 12px;
+        width: 100%;
+        height: 15px;
+        font-weight: 600;
+        margin-bottom: 7px;
+      }
 
-          .social-icon {
-            cursor: pointer;
-            margin: 20px 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 35px;
-            height: 35px;
-            border-radius: 20px;
-            border: 1px solid rgb(185, 185, 185);
-          }
-        }
+      .input {
+        width: 100%;
+        height: 30px;
+        border-radius: 30px;
+        background: #f1f1f1;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      &.password-input {
+        position: relative;
 
-        .divider {
-          text-align: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .password-eye-btn {
+          position: absolute;
+          top: 23px;
+          right: 15px;
+          padding: 5px;
+          width: 32px;
+          height: 32px;
+          background: none;
+          border: none;
+          cursor: pointer;
 
-          &::before,
-          &::after {
-            content: "";
-            display: inline-block;
-            width: 100%;
-            border-top: 1px solid #7b818e;
-          }
-        }
+          .password-eye-icon {
+            fill: #696969;
+            width: 18px;
+            height: 18px;
 
-        .divider-text {
-          font-weight: bold;
-          color: #7b818e;
-          font-size: 12px;
-          font-weight: 400;
-          margin: 0 15px;
-        }
-
-        .input-wrapper {
-          display: flex;
-          flex-wrap: wrap;
-          text-align: left;
-          margin-top: 20px;
-
-          span {
-            width: 100%;
-            height: 15px;
-            font-weight: 600;
-            margin-bottom: 7px;
-          }
-
-          .input {
-            margin-top: 5px;
-            width: 100%;
-            height: 35px;
-            border-radius: 30px;
-            background: #f1f1f1;
-            border: none;
-            outline: none;
-            padding-left: 15px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-          }
-          &.password-input {
-            position: relative;
-
-            .password-eye-btn {
-              position: absolute;
-              top: 28px;
-              right: 15px;
-              padding: 5px;
-              width: 32px;
-              height: 32px;
-              background: none;
-              border: none;
-              cursor: pointer;
-
-              .password-eye-icon {
-                width: 18px;
-                height: 18px;
-              }
+            &:hover {
+              background-image: red;
             }
           }
         }
-
-        .sign-in__btn {
-          margin-top: 20px;
-          border: none;
-          outline: none;
-          background: #000;
-          color: #fff;
-          width: 100%;
-          height: 50px;
-          border-radius: 70px;
-          font-weight: 600;
-          cursor: pointer;
-
-          &:active {
-            background: #fbc400;
-            color: #000;
-          }
-        }
       }
     }
 
-    .image-block {
-      @media (max-width: 900px) {
-        display: none;
-      }
-      padding: 15px;
-      width: 460px;
-      height: 640px;
-      border-radius: 20px;
-    }
-
-    .forgot-password {
-      @include link-style;
+    .sign-in__btn {
       margin-top: 20px;
+      border: none;
+      outline: none;
+      background: #000;
+      color: #fff;
+      width: 100%;
+      height: 50px;
+      border-radius: 70px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background: #fbc400;
+        color: #000;
+        transition: 0.3s ease-out;
+      }
     }
   }
+}
+
+.image-block {
+  @media (max-width: 900px) {
+    display: none;
+  }
+  padding: 15px;
+  width: 460px;
+  height: 640px;
+  border-radius: 20px;
+}
+
+.forgot-password {
+  @include link-style;
+  margin-top: 20px;
 }
