@@ -160,6 +160,7 @@ body {
   height: 18px;
 }
 .authorization__form .authorization__input-wrapper .password-eye-btn:hover {
+  transition: 0.3s ease-out;
   fill: #7b818e;
 }
 .authorization__sign-in-btn {
