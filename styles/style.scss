@@ -36,56 +36,58 @@ body {
   }
 }
 
-.authorization-section {
+.authorization {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.authorization-wrapper {
-  @media (max-width: 900px) {
-    width: 420px;
-  }
-  width: 900px;
-  height: 660px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-}
-.authorization-form {
-  @media (max-width: 900px) {
-    width: 100%;
-    margin: 0 50px;
-  }
-  margin-left: 15px;
-  width: 460px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 
-  .authorization-info {
-    width: 310px;
+  &__wrapper {
+    @media (max-width: 900px) {
+      width: 420px;
+    }
+    width: 900px;
+    height: 660px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
 
-    .title {
+  &__form {
+    @media (max-width: 900px) {
+      width: 100%;
+      margin: 0 50px;
+    }
+    margin-left: 15px;
+    width: 460px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__info {
+      width: 310px;
+    }
+
+    .authorization__title {
       font-size: 36px;
       margin: 20px 0 0 0;
     }
 
-    .subtitle {
+    .authorization__subtitle {
       @include link-style;
       margin-top: 10px;
     }
 
-    .social-contact {
+    .authorization__social-contact {
       display: flex;
       justify-content: center;
 
-      .social-icon {
+      .authorization__social-icon {
         margin: 20px 5px;
         display: flex;
         justify-content: center;
@@ -109,7 +111,7 @@ body {
       }
     }
 
-    .divider {
+    .authorization__divider {
       text-align: center;
       display: flex;
       align-items: center;
@@ -124,7 +126,7 @@ body {
       }
     }
 
-    .divider-text {
+    .authorization__divider-text {
       font-weight: bold;
       color: #7b818e;
       font-size: 12px;
@@ -132,7 +134,8 @@ body {
       margin: 0 15px;
     }
 
-    .input-wrapper {
+    .authorization__input-wrapper {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       text-align: left;
@@ -157,65 +160,62 @@ body {
         font-weight: 500;
         transition: color 0.3s ease;
       }
-      &.password-input {
-        position: relative;
 
-        .password-eye-btn {
-          position: absolute;
-          top: 23px;
-          right: 15px;
-          padding: 5px;
-          width: 32px;
-          height: 32px;
-          background: none;
-          border: none;
-          cursor: pointer;
+      .password-eye-btn {
+        position: absolute;
+        top: 23px;
+        right: 15px;
+        padding: 5px;
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
 
-          .password-eye-icon {
-            fill: #696969;
-            width: 18px;
-            height: 18px;
-
-            &:hover {
-              background-image: red;
-            }
-          }
+        .password-eye-icon {
+          fill: #696969;
+          width: 18px;
+          height: 18px;
+        }
+        &:hover {
+          fill: #7b818e;
+          // background: red;
         }
       }
     }
+  }
 
-    .sign-in__btn {
-      margin-top: 20px;
-      border: none;
-      outline: none;
-      background: #000;
-      color: #fff;
-      width: 100%;
-      height: 50px;
-      border-radius: 70px;
-      font-weight: 600;
-      cursor: pointer;
+  &__sign-in-btn {
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 70px;
+    font-weight: 600;
+    cursor: pointer;
 
-      &:hover {
-        background: #fbc400;
-        color: #000;
-        transition: 0.3s ease-out;
-      }
+    &:hover {
+      background: #fbc400;
+      color: #000;
+      transition: 0.3s ease-out;
     }
   }
-}
 
-.image-block {
-  @media (max-width: 900px) {
-    display: none;
+  &__forgot-password {
+    @include link-style;
+    margin-top: 20px;
   }
-  padding: 15px;
-  width: 460px;
-  height: 640px;
-  border-radius: 20px;
-}
 
-.forgot-password {
-  @include link-style;
-  margin-top: 20px;
+  &__image-block {
+    @media (max-width: 900px) {
+      display: none;
+    }
+    padding: 15px;
+    width: 460px;
+    height: 640px;
+    border-radius: 20px;
+  }
 }

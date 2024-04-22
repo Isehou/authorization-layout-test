@@ -10,19 +10,22 @@
     </style>
   </head>
   <body>
-    <section class="authorization-section">
-      <div class="authorization-wrapper">
-        <form class="authorization-form">
-          <div class="authorization-info">
-            <div>
+    <section class="authorization">
+      <div class="authorization__wrapper">
+        <form class="authorization__form">
+          <div class="authorization__info">
+            <div class="authorization__logo">
               <img src="./assets/logo.png" alt="logo" class="logo-img" />
             </div>
-            <h1 class="title">Welcome friend!</h1>
-            <div class="subtitle">
+            <h1 class="authorization__title">Welcome friend!</h1>
+            <div class="authorization__subtitle">
               Don't you have a profile? <a href="#">Register</a>
             </div>
-            <div class="social-contact">
-              <a class="social-icon">
+            <div class="authorization__social-contact">
+              <a
+                href="#"
+                class="authorization__social-icon authorization__social-icon--facebook"
+              >
                 <svg
                   width="12"
                   height="12"
@@ -36,7 +39,10 @@
                   />
                 </svg>
               </a>
-              <a class="social-icon">
+              <a
+                href="#"
+                class="authorization__social-icon authorization__social-icon--twitter"
+              >
                 <svg
                   width="12"
                   height="12"
@@ -50,7 +56,10 @@
                   />
                 </svg>
               </a>
-              <a class="social-icon">
+              <a
+                href="#"
+                class="authorization__social-icon authorization__social-icon--instagram"
+              >
                 <svg
                   width="12"
                   height="12"
@@ -64,7 +73,10 @@
                   />
                 </svg>
               </a>
-              <a class="social-icon">
+              <a
+                href="#"
+                class="authorization__social-icon authorization__social-icon--linkedin"
+              >
                 <svg
                   width="13"
                   height="8"
@@ -80,11 +92,11 @@
               </a>
             </div>
 
-            <div class="divider">
-              <span class="divider-text">Or</span>
+            <div class="authorization__divider">
+              <span class="authorization__divider-text">Or</span>
             </div>
 
-            <div class="input-wrapper">
+            <div class="authorization__input-wrapper">
               <label>Email</label>
               <input
                 class="input"
@@ -93,7 +105,9 @@
               />
             </div>
 
-            <div class="input-wrapper password-input">
+            <div
+              class="authorization__input-wrapper authorization__input-wrapper--password"
+            >
               <label>Password</label>
               <input
                 class="input"
@@ -114,15 +128,15 @@
               </button>
             </div>
 
-            <div class="sign-in">
-              <button class="sign-in__btn">Sign In</button>
+            <div class="authorization__sign-in">
+              <button class="authorization__sign-in-btn">Sign In</button>
             </div>
-            <div class="forgot-password">
+            <div class="authorization__forgot-password">
               <a href="#">Forgot password</a>
             </div>
           </div>
         </form>
-        <div class="image-block">
+        <div class="authorization__image-block">
           <img src="./assets/smile-background.png" alt="smile-background" />
         </div>
       </div>
