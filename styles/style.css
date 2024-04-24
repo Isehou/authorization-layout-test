@@ -153,6 +153,8 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  filter: invert(65%) sepia(75%);
+  transition: 0.3s ease-out;
 }
 .authorization__form .authorization__input-wrapper .password-eye-btn .password-eye-icon {
   fill: #696969;
@@ -160,8 +162,7 @@ body {
   height: 18px;
 }
 .authorization__form .authorization__input-wrapper .password-eye-btn:hover {
-  transition: 0.3s ease-out;
-  fill: #7b818e;
+  filter: invert(0%) sepia(0%);
 }
 .authorization__sign-in-btn {
   margin-top: 20px;
